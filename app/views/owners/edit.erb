@@ -3,11 +3,10 @@
 
 <form action="/owners/<%= @owner.id %>" method="POST">
   <input id="hidden" type="hidden" name="_method" value="patch">
-  <label>Name:</label>
 
-  <br></br>
-
-  <input type="text" name="owner[name]" id="owner_name" value="<%= @owner.name %>">
+  <label>Edit Name:</label>
+  <br>
+  <input type="text" name="owner[name]" value="<%= @owner.name %>">
   <br></br>
   <label>Choose an existing pet:</label>
   <br></br>
