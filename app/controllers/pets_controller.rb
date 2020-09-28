@@ -26,7 +26,7 @@ class PetsController < ApplicationController
     @pet = Pet.find_by_id(params[:id])
     @owners = Owner.all
     erb :'/pets/edit'
-  end 
+  end
 
 
   get '/pets/:id' do
@@ -43,5 +43,4 @@ class PetsController < ApplicationController
     @pet.save
     redirect to "pets/#{@pet.id}"
   end
-end
 end
