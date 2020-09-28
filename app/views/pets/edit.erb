@@ -9,13 +9,13 @@
     <input type="text" name="pet[name]" id="pet_name" value="<%= @pet.name %>"><br></br>
 
 
-    <label>Choose an existing owner:</label><br></br>
-    <%@owners.each do |owner|%>
-      <input type="radio" name="pet[owner_id]" id="<%= owner.id %>" value="<%= owner.id %>" <%= 'checked' if @pet.owner == owner %>><%= owner.name %></input>
+    <label>Existing Owner:</label>
+    <% @owners.each do |owner| %>
+      <input type="radio" name="pet[owner_id]" id="<%= owner.id %>" value="<%= owner.id %>" <%= 'checked' if @pet.owner == owner %>><%=owner.name%></input>
     <%end%>
     <br>
 
-    <label>New owner:</label>
+    <label>New Owner:</label>
     <br>
     <label>Pet Owner:</label>
       <input  type="text" name="owner[name]" id="owner_name"></input>
